@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Homework5</title>
 </head>
 <body>
-$END$
+<script>
+    const age = prompt("Enter your age");
+    const city = prompt("Enter your city");
+    const sport = prompt("Enter your favourite sport");
+    let messageCity, messageSport, messageAge;
+
+    if (age === "" || age === null) {
+        messageAge = "Sorry, you did not want to enter your age. ";
+    } else messageAge = `Your age is ${age}. `;
+
+
+    if (city === "" || city === null) {
+        messageCity = "Sorry, you did not want to enter your city. ";
+    }
+    else if (city === "Kyiv" || city === "Washington" || city === "London") {
+       messageCity = `You live in capital ${city}. `;
+    }
+    else messageCity = `You live in ${city}. `;
+
+
+    if (sport === "" || sport === null) {
+        messageSport = "Sorry, you did not want to enter your sport. ";
+    } else if (sport === "badminton") {
+        messageSport = "Cool! Do you want to become Lol Kean Yew?";
+    } else if (sport === "football" ) {
+        messageSport = "Cool! Do you want to become Messi?";
+    } else if (sport === "box") {
+        messageSport = "Cool! Do you want to become Usyk?";
+    } else messageSport = `Cool! Your sport ${sport}`;
+
+    alert(messageAge + messageCity + messageSport);
+</script>
 </body>
 </html>
