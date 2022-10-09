@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    const age = prompt("Enter your age");
+    const age = +prompt("Enter your age");
     const city = prompt("Enter your city");
     const sport = prompt("Enter your favourite sport");
     let messageCity, messageSport, messageAge;
 
-    if (age === "" || age === null) {
-        messageAge = "Sorry, you did not want to enter your age. ";
-    } else messageAge = `Your age is ${age}. `;
+    if (age > 0)  {
+        messageAge = `Your age is ${age}. `;
+    } else messageAge = "Sorry, you did not want to enter your age. ";
 
 
     if (city === "" || city === null) {
@@ -27,11 +27,11 @@
 
     if (sport === "" || sport === null) {
         messageSport = "Sorry, you did not want to enter your sport. ";
-    } else if (sport === "badminton") {
+    } else if (sport === "Badminton") {
         messageSport = "Cool! Do you want to become Lol Kean Yew?";
-    } else if (sport === "football" ) {
+    } else if (sport === "Football" ) {
         messageSport = "Cool! Do you want to become Messi?";
-    } else if (sport === "box") {
+    } else if (sport === "Box") {
         messageSport = "Cool! Do you want to become Usyk?";
     } else messageSport = `Cool! Your sport ${sport}`;
 
